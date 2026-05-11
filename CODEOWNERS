@@ -1,0 +1,6 @@
+# Each top-level skill directory has an owner who reviews PRs touching it.
+# Non-skill files (README, LICENSE, etc.) have no required owner —
+# any team member with write access can review and approve.
+
+/skills/frontend-design/         @haidave
+/skills/fixing-accessibility/    @haidave

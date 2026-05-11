@@ -1,0 +1,21 @@
+frontend-toolbox
+Copyright 2026 STRV s.r.o.
+
+This product is licensed under the Apache License, Version 2.0.
+See LICENSE for the full license text.
+
+----------------------------------------------------------------------
+
+This product redistributes the following third-party software:
+
+* skills/frontend-design/
+  Copyright Anthropic, PBC.
+  Licensed under the Apache License, Version 2.0.
+  Source: https://github.com/anthropics/skills/tree/main/skills/frontend-design
+  Original license retained at skills/frontend-design/LICENSE.txt.
+
+* skills/fixing-accessibility/
+  Copyright (c) 2026 Julien Thibeaut (@ibelick).
+  Licensed under the MIT License.
+  Source: https://github.com/ibelick/ui-skills/tree/main/skills/fixing-accessibility
+  Original license retained at skills/fixing-accessibility/LICENSE.txt.

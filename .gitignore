@@ -1,0 +1,11 @@
+# `npx skills` install artifacts — only present when this repo is also used as a target install dir
+.agents/
+.claude/
+.cursor/
+.codex/
+skills-lock.json
+
+# editors / OS
+.DS_Store
+.vscode/
+.idea/
