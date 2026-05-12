@@ -19,3 +19,9 @@ This product redistributes the following third-party software:
   Licensed under the MIT License.
   Source: https://github.com/ibelick/ui-skills/tree/main/skills/fixing-accessibility
   Original license retained at skills/fixing-accessibility/LICENSE.txt.
+
+* skills/grill-with-docs/
+  Copyright (c) 2026 Matt Pocock.
+  Licensed under the MIT License.
+  Source: https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs
+  Original license retained at skills/grill-with-docs/LICENSE.txt.
