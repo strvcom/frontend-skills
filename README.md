@@ -4,7 +4,7 @@ Shared AI-tool skills for the STRV frontend team. Works with Claude Code, Codex 
 
 ## Install
 
-**Common case** — Claude Code, project-local, all skills:
+**Common case** — Claude Code, project-local. You will be prompted to pick which skills to install:
 
 ```bash
 npx skills add strvcom/frontend-skills -a claude-code
@@ -13,17 +13,20 @@ npx skills add strvcom/frontend-skills -a claude-code
 **Other variants:**
 
 ```bash
-# Pick the agent interactively (omit -a to be prompted)
+# Fully interactive — pick the agent too
 npx skills add strvcom/frontend-skills
 
-# One skill, globally (across all your projects)
+# All skills, no prompts (re-installs / CI)
+npx skills add strvcom/frontend-skills -a claude-code -s '*' -y
+
+# One specific skill, globally (across all your projects)
 npx skills add strvcom/frontend-skills -a claude-code -s grill-me -g
 
-# Everything everywhere, non-interactive
+# Everything everywhere (all skills, all agents, no prompts)
 npx skills add strvcom/frontend-skills --all
 ```
 
-Useful flags: `-a` (agent — `claude-code`, `codex`, `cursor`, or `*`; repeatable), `-s` (skill name; repeatable; `*` for all), `-g` (global / user-level), `--copy` (copy instead of symlink). Run `npx skills --help` for the full CLI.
+Useful flags: `-a` (agent — `claude-code`, `codex`, `cursor`, or `*`; repeatable), `-s` (skill name; repeatable; `*` for all), `-g` (global / user-level), `-y` (skip prompts), `--copy` (copy instead of symlink). Run `npx skills --help` for the full CLI.
 
 Files land in `.agents/skills/<name>/` with a symlink at `.claude/skills/<name>/` for Claude Code.
 
