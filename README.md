@@ -49,6 +49,7 @@ Skills track the latest commit on `main` — there's no version pinning yet. Bre
 | [`fixing-accessibility`](skills/fixing-accessibility/SKILL.md) | Fix a11y issues (ARIA, keyboard, focus, contrast, forms) with priority-ranked rules. Plays well with shadcn/Radix/Base UI primitives. Vendored from [ibelick/ui-skills](https://github.com/ibelick/ui-skills). | @haidave |
 | [`grill-me`](skills/grill-me/SKILL.md) | Interview-style planning skill. Grills you on a plan or design, walking down each branch of the decision tree one question at a time until a shared understanding lands. Vendored from [mattpocock/skills](https://github.com/mattpocock/skills). | @haidave |
 | [`compress-video`](skills/compress-video/SKILL.md) | Compress and re-encode a video file to a smaller MP4 (H.264 + AAC) via ffmpeg. Use when sharing videos through size-constrained channels (Signal, Slack, email). | @sebous |
+| [`nutshell`](skills/nutshell/SKILL.md) | Distill anything to its essence — TLDR a concept, name a thing, condense a procedure. | @ZaweSK |
 
 More skills land as domain owners are recruited. See [CODEOWNERS](CODEOWNERS).
 
