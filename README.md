@@ -50,6 +50,7 @@ Skills track the latest commit on `main` — there's no version pinning yet. Bre
 | [`grill-me`](skills/grill-me/SKILL.md) | Interview-style planning skill. Grills you on a plan or design, walking down each branch of the decision tree one question at a time until a shared understanding lands. Vendored from [mattpocock/skills](https://github.com/mattpocock/skills). | @haidave |
 | [`compress-video`](skills/compress-video/SKILL.md) | Compress and re-encode a video file to a smaller MP4 (H.264 + AAC) via ffmpeg. Use when sharing videos through size-constrained channels (Signal, Slack, email). | @sebous |
 | [`nutshell`](skills/nutshell/SKILL.md) | Distill anything to its essence — TLDR a concept, name a thing, condense a procedure. | @ZaweSK |
+| [`the-fool`](skills/the-fool/SKILL.md) | Devil's advocate that stress-tests plans, decisions, and proposals via Socratic questioning, dialectic synthesis, pre-mortem, red team, or evidence audit. Vendored from [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills). | @gneutzling |
 
 More skills land as domain owners are recruited. See [CODEOWNERS](CODEOWNERS).
 
