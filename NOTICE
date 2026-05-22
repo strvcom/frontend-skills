@@ -31,3 +31,9 @@ This product redistributes the following third-party software:
   Licensed under the MIT License.
   Source: https://github.com/Jeffallan/claude-skills/tree/main/skills/the-fool
   Original license retained at skills/the-fool/LICENSE.txt.
+
+* skills/handoff/
+  Copyright (c) 2026 Matt Pocock.
+  Licensed under the MIT License.
+  Source: https://github.com/mattpocock/skills/tree/main/skills/productivity/handoff
+  Original license retained at skills/handoff/LICENSE.txt.
