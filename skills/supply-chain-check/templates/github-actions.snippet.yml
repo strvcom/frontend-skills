@@ -1,0 +1,15 @@
+# Drop these steps into your GitHub Actions workflow BEFORE any `npm ci` /
+# `pnpm install --frozen-lockfile` / `yarn install --immutable` / `bun install --frozen-lockfile` step.
+#
+# {{VERSION}} is rendered from policy.json — do not replace with `latest`.
+
+- name: Install safe-chain
+  run: curl -fsSL https://github.com/AikidoSec/safe-chain/releases/download/{{VERSION}}/install-safe-chain.sh | sh -s -- --ci
+  # Pin the version — don't track `latest` in CI.
+
+- name: Install dependencies
+  run: npm ci
+  env:
+    SAFE_CHAIN_LOGGING: verbose
+    # Verbose logging makes blocked installs legible in the CI log.
+    # See https://github.com/AikidoSec/safe-chain#logging

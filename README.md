@@ -52,6 +52,7 @@ Skills track the latest commit on `main` — there's no version pinning yet. Bre
 | [`nutshell`](skills/nutshell/SKILL.md) | Distill anything to its essence — TLDR a concept, name a thing, condense a procedure. | @ZaweSK |
 | [`the-fool`](skills/the-fool/SKILL.md) | Devil's advocate that stress-tests plans, decisions, and proposals via Socratic questioning, dialectic synthesis, pre-mortem, red team, or evidence audit. Vendored from [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills). | @gneutzling |
 | [`logical-commits`](skills/logical-commits/SKILL.md) | Split working-tree changes into clean Conventional Commits. Auto-detects repo conventions, proposes a grouping, and gates every type/scope/approval through interactive selections. Never bypasses git hooks. | @gneutzling |
+| [`supply-chain-check`](skills/supply-chain-check/SKILL.md) | Audit JS supply-chain hygiene — Safe Chain on the dev machine, `.npmrc`/equivalent in the repo, GitHub Actions CI gates, CONTRIBUTING.md mention — and offer interactive fixes one by one. | @monkey-denky |
 | [`handoff`](skills/handoff/SKILL.md) | Compact the current conversation into a handoff document for another agent to pick up. Vendored from [mattpocock/skills](https://github.com/mattpocock/skills). | @sebous |
 
 More skills land as domain owners are recruited. See [CODEOWNERS](CODEOWNERS).

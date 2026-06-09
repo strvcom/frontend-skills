@@ -1,0 +1,8 @@
+# Block malicious postinstall/preinstall scripts — the #1 attack vector.
+# See https://docs.npmjs.com/cli/v11/using-npm/config#ignore-scripts
+ignore-scripts=true
+# Don't install packages newer than 3 days.
+# See https://docs.npmjs.com/cli/v11/using-npm/config#min-release-age
+min-release-age=3
+# Force exact lockfile resolution.
+engine-strict=true

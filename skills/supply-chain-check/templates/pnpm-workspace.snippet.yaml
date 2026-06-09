@@ -1,0 +1,3 @@
+# https://pnpm.io/supply-chain-security
+minimumReleaseAge: 4320  # 72 hrs
+onlyBuiltDependencies: []  # explicit allowlist for postinstalls

@@ -1,0 +1,10 @@
+{
+  "minimumPackageAgeHours": 72,
+  "safeChainInstallerVersion": "1.4.4",
+  "minRelease": {
+    "npm": 3,
+    "pnpm": 4320,
+    "yarn": "3d",
+    "bun": 259200
+  }
+}

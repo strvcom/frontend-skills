@@ -1,0 +1,3 @@
+# https://yarnpkg.com/configuration/yarnrc#npmMinimalAgeGate
+npmMinimalAgeGate: 3d
+enableScripts: false
