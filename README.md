@@ -55,6 +55,7 @@ Skills track the latest commit on `main` — there's no version pinning yet. Bre
 | [`supply-chain-check`](skills/supply-chain-check/SKILL.md) | Audit JS supply-chain hygiene — Safe Chain on the dev machine, `.npmrc`/equivalent in the repo, GitHub Actions CI gates, CONTRIBUTING.md mention — and offer interactive fixes one by one. | @monkey-denky |
 | [`handoff`](skills/handoff/SKILL.md) | Compact the current conversation into a handoff document for another agent to pick up. Vendored from [mattpocock/skills](https://github.com/mattpocock/skills). | @sebous |
 | [`pr-daily`](skills/pr-daily/SKILL.md) | Oversight-first daily PR maintenance. Resolves the right `gh` account, fans out read-only parallel code reviews on PRs awaiting your review (never auto-submitted), and single-threads verification-gated fixes (rebase, review comments, CI) on your own PRs. Repo- and stack-agnostic. | @sebous |
+| [`improve`](skills/improve/SKILL.md) | Senior-advisor codebase audit that produces prioritized, self-contained implementation plans for other agents to execute — strictly read-only, never implements. Use to audit, find improvement opportunities, or generate handoff plans. Vendored from [shadcn/improve](https://github.com/shadcn/improve). | @haidave |
 
 More skills land as domain owners are recruited. See [CODEOWNERS](CODEOWNERS).
 
