@@ -43,3 +43,9 @@ This product redistributes the following third-party software:
   Licensed under the MIT License.
   Source: https://github.com/shadcn/improve/tree/main/skills/improve
   Original license retained at skills/improve/LICENSE.txt.
+
+* skills/improve-animations/
+  Copyright (c) 2026 Emil Kowalski.
+  Licensed under the MIT License.
+  Source: https://github.com/emilkowalski/skills/tree/main/skills/improve-animations
+  Original license retained at skills/improve-animations/LICENSE.txt.
