@@ -57,6 +57,7 @@ Skills track the latest commit on `main` — there's no version pinning yet. Bre
 | [`pr-daily`](skills/pr-daily/SKILL.md) | Oversight-first daily PR maintenance. Resolves the right `gh` account, fans out read-only parallel code reviews on PRs awaiting your review (never auto-submitted), and single-threads verification-gated fixes (rebase, review comments, CI) on your own PRs. Repo- and stack-agnostic. | @sebous |
 | [`improve`](skills/improve/SKILL.md) | Senior-advisor codebase audit that produces prioritized, self-contained implementation plans for other agents to execute — strictly read-only, never implements. Use to audit, find improvement opportunities, or generate handoff plans. Vendored from [shadcn/improve](https://github.com/shadcn/improve). | @haidave |
 | [`improve-animations`](skills/improve-animations/SKILL.md) | Senior motion-advisor audit of a codebase's animation code, producing prioritized findings and self-contained implementation plans for other agents to execute — read-only, plans not applies. Use to "improve the animations" or audit motion craft. Vendored from [emilkowalski/skills](https://github.com/emilkowalski/skills). | @haidave |
+| [`aikido-jira`](skills/aikido-jira/SKILL.md) | Turn Aikido security findings into Jira tickets — one ticket per root cause, deduplicated against existing tickets via a machine label, behind a single review gate. Configures itself per repo on first run. Needs the Aikido and Atlassian MCP servers. | @monkey-denky |
 
 More skills land as domain owners are recruited. See [CODEOWNERS](CODEOWNERS).
 
