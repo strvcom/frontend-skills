@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "docs",
+      "name": "Documentation",
       "description": "Documenting a software project: ADRs for settled decisions, RFCs for open ones, RAID logs for delivery risk, C4 diagrams for architecture.",
       "category": "documentation",
       "tags": [
