@@ -56,6 +56,8 @@ Keep skills **bounded**: one concern per skill. If your skill is doing UI design
 
 `skills/<name>/` — kebab-case, short, descriptive. Avoid `strv-` or `frontend-` prefixes (already implied by repo name).
 
+Skills that only make sense as a set may live one level deeper under a group directory — `skills/docs/adr-authoring/`. The CLI discovers `SKILL.md` at any depth, and the group gets a single CODEOWNERS entry. Group only when the set is genuinely coupled; a lone skill stays at the top level.
+
 ## Commits
 
 [Conventional Commits](https://www.conventionalcommits.org/). The relevant prefixes:

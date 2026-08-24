@@ -1,4 +1,5 @@
-# Each top-level skill directory has an owner who reviews PRs touching it.
+# Each skill directory has an owner who reviews PRs touching it. A directory
+# holding a related set (e.g. /skills/docs/) is owned as a whole.
 # Non-skill files (README, LICENSE, etc.) have no required owner —
 # any team member with write access can review and approve.
 
@@ -15,3 +16,4 @@
 /skills/improve/                 @haidave
 /skills/improve-animations/      @haidave
 /skills/aikido-jira/             @monkey-denky
+/skills/docs/                    @pchalupa

@@ -58,6 +58,10 @@ Skills track the latest commit on `main` — there's no version pinning yet. Bre
 | [`improve`](skills/improve/SKILL.md) | Senior-advisor codebase audit that produces prioritized, self-contained implementation plans for other agents to execute — strictly read-only, never implements. Use to audit, find improvement opportunities, or generate handoff plans. Vendored from [shadcn/improve](https://github.com/shadcn/improve). | @haidave |
 | [`improve-animations`](skills/improve-animations/SKILL.md) | Senior motion-advisor audit of a codebase's animation code, producing prioritized findings and self-contained implementation plans for other agents to execute — read-only, plans not applies. Use to "improve the animations" or audit motion craft. Vendored from [emilkowalski/skills](https://github.com/emilkowalski/skills). | @haidave |
 | [`aikido-jira`](skills/aikido-jira/SKILL.md) | Turn Aikido security findings into Jira tickets — one ticket per root cause, deduplicated against existing tickets via a machine label, behind a single review gate. Configures itself per repo on first run. Needs the Aikido and Atlassian MCP servers. | @monkey-denky |
+| [`adr-authoring`](skills/docs/adr-authoring/SKILL.md) | Author an ADR recording why an expensive-to-reverse technical decision was made and which alternatives lost. Grills the reasoning first, then drafts. | @pchalupa |
+| [`rfc-authoring`](skills/docs/rfc-authoring/SKILL.md) | Author an RFC proposing a still-open technical decision for asynchronous review. The ADR's counterpart, before the decision lands. | @pchalupa |
+| [`raid-logging`](skills/docs/raid-logging/SKILL.md) | Create and maintain a RAID log — the register of a project's risks, assumptions, issues, and dependencies. | @pchalupa |
+| [`architecture-diagramming`](skills/docs/architecture-diagramming/SKILL.md) | Diagram architecture as C4 levels in Mermaid: system context, container, component, dynamic, deployment, landscape. | @pchalupa |
 
 More skills land as domain owners are recruited. See [CODEOWNERS](CODEOWNERS).
 
