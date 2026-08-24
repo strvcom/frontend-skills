@@ -14,7 +14,7 @@ A RAID log is a central register that catalogs a project's **R**isks, **A**ssump
 
 Two of the four letters are flexible — pick the meaning that fits the project and use it consistently:
 
-- **R — Risks.** Potential problems that could negatively affect your project, identified during planning so they can be mitigated proactively before they occur. *Example: R-1 — third-party payment API failure during app testing (Likelihood MEDIUM, Impact HIGH, owned by Alex Martinez).*
+- **R — Risks.** Potential problems that could negatively affect your project, identified during planning so they can be mitigated proactively before they occur. *Example: R-1 — a third-party API may be unavailable during integration testing (Likelihood MEDIUM, Impact HIGH, owned by the integration lead).*
 - **A — Assumptions or Actions.** **Assumptions** are factors the team believes will hold true and plans around — best for **long-term projects that require significant forethought**. **Actions** are tasks that need completing — best for **projects with many moving parts** to track. Use ownership to keep either accountable.
 - **I — Issues.** Problems that occur during a project that you did **not** anticipate. Unlike risks — which you plan for in advance and manage through mitigation — issues pop up unexpectedly and require immediate resolution.
 - **D — Decisions or Dependencies.** **Decisions** are concrete choices that advance the project; document the **what** (the decision), the **who** (person or team responsible), and the **why** (the rationale). **Dependencies** are tasks blocked until another task is completed elsewhere.
