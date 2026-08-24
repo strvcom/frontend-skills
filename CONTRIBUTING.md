@@ -56,27 +56,6 @@ Keep skills **bounded**: one concern per skill. If your skill is doing UI design
 
 `skills/<name>/` — kebab-case, short, descriptive. Avoid `strv-` or `frontend-` prefixes (already implied by repo name).
 
-Skills that only make sense as a set may live one level deeper under a group directory — `skills/docs/adr-authoring/`. The CLI discovers `SKILL.md` at any depth, and the group gets a single CODEOWNERS entry. Group only when the set is genuinely coupled; a lone skill stays at the top level.
-
-## Plugin manifests
-
-Three files make the repo installable as a Claude Code plugin marketplace, on top of the `npx skills` path. Users add it with `/plugin marketplace add strvcom/frontend-skills`, then install a plugin from it.
-
-- `.claude-plugin/marketplace.json` — the catalog. It lists the `docs` plugin, the only one published today.
-- `skills/docs/.claude-plugin/plugin.json` — the `docs` plugin, whose root is the group directory.
-- `.claude-plugin/plugin.json` — the repo root as a plugin. Nothing in the catalog points at it, so it isn't installable; it's there for `claude --plugin-dir .`, which loads every top-level skill at once for local testing.
-
-Claude Code only discovers plugin skills one level down from a plugin root (`skills/<name>/SKILL.md`), which is why the grouped set needs a manifest of its own that names its skills explicitly. Two things follow:
-
-- **A new top-level skill needs no manifest change.** The root plugin picks it up through the default `skills/` scan.
-- **A new skill inside a group does.** Add it to the `skills` array in that group's `plugin.json`, or it ships through `npx skills` but not through the plugin.
-
-To publish another group as a plugin, give the group directory its own `plugin.json` and add a catalog entry with `"source": "./skills/<group>"`.
-
-Don't add a `version` to any of them. A version pins the plugin, so users would stop getting updates until someone bumps it, which contradicts the track-`main` model above.
-
-Run `claude plugin validate .` after touching any of them. A warning about the missing version is expected.
-
 ## Commits
 
 [Conventional Commits](https://www.conventionalcommits.org/). The relevant prefixes:
