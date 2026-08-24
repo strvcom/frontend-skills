@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "docs",
+  "description": "Documenting a software project: ADRs for settled decisions, RFCs for open ones, RAID logs for delivery risk, C4 diagrams for architecture.",
+  "author": {
+    "name": "STRV frontend team",
+    "url": "https://github.com/strvcom"
+  },
+  "homepage": "https://github.com/strvcom/frontend-skills/tree/main/skills/docs",
+  "repository": "https://github.com/strvcom/frontend-skills",
+  "license": "MIT",
+  "keywords": ["adr", "rfc", "raid", "c4", "architecture", "documentation"],
+  "skills": [
+    "./adr-authoring",
+    "./rfc-authoring",
+    "./raid-logging",
+    "./architecture-diagramming"
+  ]
+}
