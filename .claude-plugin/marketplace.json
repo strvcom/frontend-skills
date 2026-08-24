@@ -9,13 +9,6 @@
   "plugins": [
     {
       "name": "docs",
-      "source": "./skills/docs",
-      "skills": [
-        "./adr-authoring",
-        "./rfc-authoring",
-        "./raid-logging",
-        "./architecture-diagramming"
-      ],
       "description": "Documenting a software project: ADRs for settled decisions, RFCs for open ones, RAID logs for delivery risk, C4 diagrams for architecture.",
       "category": "documentation",
       "tags": [
@@ -24,6 +17,13 @@
         "raid",
         "c4",
         "architecture"
+      ],
+      "source": "./skills/docs",
+      "skills": [
+        "./adr-authoring",
+        "./rfc-authoring",
+        "./raid-logging",
+        "./architecture-diagramming"
       ]
     }
   ]
