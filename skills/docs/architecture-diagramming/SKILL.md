@@ -124,9 +124,9 @@ Control layout with the direction (`TB` or `LR`), node ordering, and invisible e
 
 **The output is always markdown files under `docs/`.** A diagram pasted into a chat reply is gone by tomorrow; the deliverable is a file in the repo that reviews, diffs, and renders wherever the team reads markdown. Write it, then tell the user the path.
 
-- **Default to `docs/architecture.md`**, with L1, L2, and L3 as sections in that one file, in order. A reader following the zoom from context to components wants them together.
+- **The document always lives at `docs/architecture.md` in the repo root**, with L1, L2, and L3 as sections in that one file, in order. One known path, so the next reader and the next agent find it without searching, and a reader following the zoom from context to components gets them together.
 - **Supporting diagrams go in the same file** under their own heading, unless one grows enough to stand alone — a deployment diagram per environment is the usual case for splitting out.
-- **Use the repo's existing docs directory** where there is one (`docs/`, `documentation/`, `doc/`), and its conventions: frontmatter fields the siblings carry, heading depth, file naming. Create `docs/` only as you write the first file into it.
+- **Follow the repo where it already keeps its docs somewhere else** (`documentation/`, `doc/`): write there, tell the user the document belongs at `docs/architecture.md`, and move it only if they say so. Either way match the siblings' conventions — frontmatter fields, heading depth, file naming. Create the directory only as you write the first file into it.
 - **Extend, never overwrite.** If the file exists, read it and replace the section for the level you redrew, leaving the rest intact.
 - Diagrams go in ```` ```mermaid ```` fences so they render in place, each followed by its key table.
 
@@ -228,9 +228,9 @@ The document earns nothing if the next agent never opens it, so make the repo's 
   ```markdown
   Keep these documents true as you work:
 
-  - **A document that contradicts the code, another document, or these instructions gets flagged.** Name both sides, say which looks stale — usually the document, since code moves faster — and let the human choose which one changes.
-  - **When your change makes a document wrong, update it in the same change.** Renaming a path, changing a command, moving an environment, swapping a library: the document naming it is part of the change, not follow-up work.
-  - **Never rewrite a recorded decision.** A reversal is a new ADR that supersedes the old one; the old one stays, with a note pointing forward.
+  - **A document that contradicts the code, another document, or these instructions gets flagged, not quietly fixed.** Say it in your reply: name both sides, say which looks stale — usually the document, since code moves faster — and let the human choose which one changes.
+  - **When your change makes a document wrong, update it in the same change.** A feature, service, or dependency you added that the architecture document does not show; a path you renamed, a command you changed, an environment you moved, a library you swapped. The document that names it — or should now name it — is part of the change, not follow-up work.
+  - **Never rewrite a recorded decision or a closed entry.** A reversal is a new record that supersedes the old one; the old one stays, with a note pointing forward.
   - **Keep the table above accurate.** A new document gets a row, a deleted one loses its row, and a row whose file has moved gets the new path.
   ```
 

@@ -18,7 +18,7 @@ The exact output shape lives in [`references/rfc-template.md`](references/rfc-te
 *Done when you have told the user the RFC number you will use, and they have confirmed the decision is still open and needs reviewer input.*
 
 - Read the template (see above) — that is the exact shape of the output.
-- Find where RFCs live (commonly `docs/rfcs/`). Scan for existing `RFC-NN-*.md` files and determine the **next sequential number**, zero-padded to two digits (e.g. `RFC-04`). Numbers are monotonic and never reused. Tell the user the number you'll use.
+- **RFCs always live in `docs/requests-for-comments/` in the repo root.** One known directory, so the next reader and the next agent find them without searching; create it as you write the first record into it. If the repo already keeps RFCs somewhere else (`docs/rfcs/`, a project folder), keep working there and tell the user where they belong; move them only if the user says so. Scan for existing `RFC-NN-*.md` files and determine the **next sequential number**, zero-padded to two digits (e.g. `RFC-04`). Numbers are monotonic and never reused. Tell the user the number you'll use.
 - If a `README.md` (or equivalent) sits alongside the RFCs, read it for the project's lifecycle and conventions.
 - Check whether this decision touches an existing dependency, risk, `ADR-NN`, or RFC — an RFC is for a decision still **open** that needs reviewer input. If it is really already decided, say so: it may belong in an ADR instead.
 
@@ -41,7 +41,7 @@ If a question can be answered from the project's source materials or existing de
 
 *Only once the user confirms the thinking is settled. Done when every template section is filled, the reviewers and both dates are set, and the decision section is left for the outcome.*
 
-- Write to `docs/rfcs/RFC-NN-<short-kebab-title>.md` (or the project's RFC location) using the template's sections exactly.
+- Write to `docs/requests-for-comments/RFC-NN-<short-kebab-title>.md` using the template's sections exactly. Make the `<short-kebab-title>` name the decision under review — `choose-realtime-transport`, not `transport-proposal` — so the filename tells a reader picking from a directory listing what this RFC decides.
 - **Apply the Voice section below** — this is prose authored on the user's behalf; it must read as theirs, human and consistent, not generic AI output.
 - Write it to be **read by a reviewer skimming for the ask, then reading for the reasoning**: a Summary graspable in one pass, full sentences in the body, diagrams (Mermaid) where a flow or state machine needs one. Not a dump of fragments.
 - **Keep it to 7 pages at most.** Following Miller's law, a reviewer holds only so much in working memory; a longer decision doc costs comprehension. If it won't fit, that's a signal the RFC is bundling more than one decision — split it or tighten the reasoning, don't shrink the type.
@@ -72,15 +72,16 @@ The document earns nothing if the next agent never opens it, so make the repo's 
   | `docs/requests-for-comments/` | a decision is still open and under review |
   ```
 
+- **A row pointing at a directory relies on the filenames inside it.** `RFC-04-choose-realtime-transport.md` tells an agent listing the directory whether this is the record it needs; `RFC-04-proposal.md` makes it read all of them. The table gets it to the right directory, the filename gets it to the right file.
 - **Replace that section in place** on a re-run. Two Documentation sections is a worse outcome than a stale one, and a row pointing at a file that no longer exists teaches agents to distrust the whole table.
 - **Carry the maintenance rules into the section.** They are what keeps the set true: documentation stays accurate because the agent that breaks a document fixes it in the same change, not because somebody audits it later. Write them as their own short block under the table:
 
   ```markdown
   Keep these documents true as you work:
 
-  - **A document that contradicts the code, another document, or these instructions gets flagged.** Name both sides, say which looks stale — usually the document, since code moves faster — and let the human choose which one changes.
-  - **When your change makes a document wrong, update it in the same change.** Renaming a path, changing a command, moving an environment, swapping a library: the document naming it is part of the change, not follow-up work.
-  - **Never rewrite a recorded decision.** A reversal is a new ADR that supersedes the old one; the old one stays, with a note pointing forward.
+  - **A document that contradicts the code, another document, or these instructions gets flagged, not quietly fixed.** Say it in your reply: name both sides, say which looks stale — usually the document, since code moves faster — and let the human choose which one changes.
+  - **When your change makes a document wrong, update it in the same change.** A feature, service, or dependency you added that the architecture document does not show; a path you renamed, a command you changed, an environment you moved, a library you swapped. The document that names it — or should now name it — is part of the change, not follow-up work.
+  - **Never rewrite a recorded decision or a closed entry.** A reversal is a new record that supersedes the old one; the old one stays, with a note pointing forward.
   - **Keep the table above accurate.** A new document gets a row, a deleted one loses its row, and a row whose file has moved gets the new path.
   ```
 
