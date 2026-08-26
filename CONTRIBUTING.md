@@ -102,4 +102,3 @@ Updates are **opt-in**. Don't expect people to run `update` daily — that's why
 - **CHANGELOG.md** — GitHub Releases is the single source of truth
 
 These are conscious omissions, not oversights. Re-evaluate as the toolkit grows.
-
