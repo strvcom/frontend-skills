@@ -23,7 +23,7 @@ The exact output shape lives in [`references/adr-template.md`](references/adr-te
 *Done when you have told the user the ADR number you will use and they have confirmed this is a decision already made.*
 
 - Read the template (see above) — that is the exact shape of the output.
-- Find where ADRs live (commonly `docs/decisions/` or `docs/adr/`). Scan for existing `ADR-NN-*.md` files and determine the **next sequential number**, zero-padded to two digits (e.g. `ADR-04`). Numbers are monotonic and never reused, even for superseded decisions. Tell the user the number you'll use.
+- **ADRs always live in `docs/decisions/` in the repo root.** One known directory, so the next reader and the next agent find them without searching; create it as you write the first record into it. If the repo already keeps ADRs somewhere else (`docs/adr/`, a project folder), keep working there and tell the user where they belong; move them only if the user says so. Scan for existing `ADR-NN-*.md` files and determine the **next sequential number**, zero-padded to two digits (e.g. `ADR-04`). Numbers are monotonic and never reused, even for superseded decisions. Tell the user the number you'll use.
 - If a `README.md` (or equivalent) sits alongside the ADRs, read it for the project's conventions and any "likely decisions to capture" list.
 - Check whether this decision touches an existing open question, dependency, or risk the project tracks — an ADR records a decision **already made**. If it is really still open and needs reviewer input, say so: it may belong in an RFC instead.
 
@@ -44,7 +44,7 @@ If a question can be answered from the project's source materials or existing de
 
 *Only once the user confirms the thinking is settled. Done when every template section is filled and the file carries no scaffolding.*
 
-- Write to `<adr-location>/ADR-NN-<short-kebab-title>.md` using the template's sections exactly: YAML frontmatter (`date`) plus Context, Decision, Alternatives considered, and Consequences. Make the `<short-kebab-title>` a present-tense imperative verb phrase — `choose-realtime-transport`, not `realtime-transport-decision` — so the filename reads as the decision itself.
+- Write to `docs/decisions/ADR-NN-<short-kebab-title>.md` using the template's sections exactly: YAML frontmatter (`date`) plus Context, Decision, Alternatives considered, and Consequences. Make the `<short-kebab-title>` a present-tense imperative verb phrase — `choose-realtime-transport`, not `realtime-transport-decision` — so the filename reads as the decision itself.
 - **One decision per ADR.** Each record captures a single architecture decision. If the grill surfaces a second decision riding along, split it into its own ADR (next number) and cross-reference — one ADR triggering follow-on ADRs is normal, not a smell.
 - **Link inline, so a reader can follow every claim.** Anything a reader would otherwise go and search for becomes a link the first time it appears:
   - **A sibling record** — a relative link that resolves from this file: `[ADR-03](ADR-03-adopt-expo-as-the-framework.md)`, `[RFC-05](../requests-for-comments/RFC-05-api-error-resilience.md)`.
@@ -87,15 +87,16 @@ The document earns nothing if the next agent never opens it, so make the repo's 
   | `docs/decisions/` | you are about to re-decide something an `ADR-NN` may already settle |
   ```
 
+- **A row pointing at a directory relies on the filenames inside it.** `ADR-04-choose-realtime-transport.md` tells an agent listing the directory whether this is the record it needs; `ADR-04-notes.md` makes it read all of them. The table gets it to the right directory, the filename gets it to the right file.
 - **Replace that section in place** on a re-run. Two Documentation sections is a worse outcome than a stale one, and a row pointing at a file that no longer exists teaches agents to distrust the whole table.
 - **Carry the maintenance rules into the section.** They are what keeps the set true: documentation stays accurate because the agent that breaks a document fixes it in the same change, not because somebody audits it later. Write them as their own short block under the table:
 
   ```markdown
   Keep these documents true as you work:
 
-  - **A document that contradicts the code, another document, or these instructions gets flagged.** Name both sides, say which looks stale — usually the document, since code moves faster — and let the human choose which one changes.
-  - **When your change makes a document wrong, update it in the same change.** Renaming a path, changing a command, moving an environment, swapping a library: the document naming it is part of the change, not follow-up work.
-  - **Never rewrite a recorded decision.** A reversal is a new ADR that supersedes the old one; the old one stays, with a note pointing forward.
+  - **A document that contradicts the code, another document, or these instructions gets flagged, not quietly fixed.** Say it in your reply: name both sides, say which looks stale — usually the document, since code moves faster — and let the human choose which one changes.
+  - **When your change makes a document wrong, update it in the same change.** A feature, service, or dependency you added that the architecture document does not show; a path you renamed, a command you changed, an environment you moved, a library you swapped. The document that names it — or should now name it — is part of the change, not follow-up work.
+  - **Never rewrite a recorded decision or a closed entry.** A reversal is a new record that supersedes the old one; the old one stays, with a note pointing forward.
   - **Keep the table above accurate.** A new document gets a row, a deleted one loses its row, and a row whose file has moved gets the new path.
   ```
 
