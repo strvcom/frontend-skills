@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "frontend-skills",
+  "description": "Shared AI-tool skills for the STRV frontend team.",
+  "author": {
+    "name": "STRV frontend team",
+    "url": "https://github.com/strvcom"
+  },
+  "homepage": "https://github.com/strvcom/frontend-skills",
+  "repository": "https://github.com/strvcom/frontend-skills",
+  "license": "MIT",
+  "keywords": ["frontend", "skills", "strv"]
+}

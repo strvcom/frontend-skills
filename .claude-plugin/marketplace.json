@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "frontend-skills",
+  "description": "STRV frontend team's skills, installable as Claude Code plugins.",
+  "owner": {
+    "name": "STRV frontend team",
+    "url": "https://github.com/strvcom"
+  },
+  "plugins": [
+    {
+      "name": "Documentation",
+      "description": "Documenting a software project: ADRs for settled decisions, RFCs for open ones, RAID logs for delivery risk, C4 diagrams for architecture.",
+      "category": "documentation",
+      "tags": [
+        "adr",
+        "rfc",
+        "raid",
+        "c4",
+        "architecture"
+      ],
+      "source": "./skills/docs",
+      "skills": [
+        "./adr-authoring",
+        "./rfc-authoring",
+        "./raid-logging",
+        "./architecture-diagramming"
+      ]
+    }
+  ]
+}
